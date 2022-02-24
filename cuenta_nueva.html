@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fuentes de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/materialize-change.css">
+    <title>Registro</title>
+</head>
+<body>
+    <nav class="amber darken-2">
+        <div class="nav-wrapper container nav-fixed">
+            <a href="index.html" class="left">
+                <div style="transform: scale(1.5);">
+                    Logo
+                    <i class="material-icons left">pets</i>
+                </div>
+            </a>
+            <ul class="right">
+                <li>
+                    <a href="inicio_sesion.html" class="">
+                        <h6 style="display: inline; font-size: 1.5rem; font-weight: 500;">Inicia sesión</h6>
+                        <i class="material-icons right" style="transform: scale(1.3);">input</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s6">
+                        <h2 class="orange-text text-darken-2 center">Registro</h2>
+                        <form id="form">
+                            <div class="row">
+                                <div class="input-field col s6 input-change">
+                                    <i class="material-icons prefix">person_outline</i>
+                                    <input id="nombres" type="text" class="validate">
+                                    <label for="nombres">Nombres</label>
+                                </div>
+                                <div class="input-field col s6 input-change">
+                                    <i class="material-icons prefix">person_outline</i>
+                                    <input id="apellidos" type="text" class="validate">
+                                    <label for="apellidos">Apellidos</label>
+                                </div>
+                                <div class="input-field col s6 input-change">
+                                    <i class="material-icons prefix">location_city</i>
+                                    <input id="residencia" type="text" class="validate">
+                                    <label for="residencia">Lugar de residencia</label>
+                                </div>
+                                <div class="input-field col s6 input-change">
+                                    <i class="material-icons prefix">cake</i>
+                                    <input type="text" class="datepicker" id="nacimiento">
+                                    <label for="nacimiento">Fecha de nacimiento</label>
+                                </div>
+                                <div class="col s12">
+                                    <div class="input-field input-change">
+                                        <i class="material-icons prefix">home</i>
+                                        <input type="text" class="validate" id="direccion">
+                                        <label for="direccion">Dirección</label>
+                                    </div>
+                                    <div class="input-field input-change">
+                                        <i class="material-icons prefix">mail_outline</i>
+                                        <input type="email" id="usuario-registro" class="validate">
+                                        <label for="usuario-registro">E-mail</label>
+                                    </div>
+                                    <div class="input-field input-change">
+                                        <i class="material-icons prefix">lock_outline</i>
+                                        <input type="password" id="contra-registro" class="validate">
+                                        <label for="contra-registro">Contraseña</label>
+                                    </div>
+                                    <div class="input-field input-change">
+                                        <i class="material-icons prefix">lock_outline</i>
+                                        <input type="password" id="contra-registro-2" class="validate">
+                                        <label for="contra-registro-2">Contraseña</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container center-align">
+                                <button class="btn center orange darken-2 waves-effect waves-light"
+                                style="transform: scale(1.1); font-size: 1.1rem; ">
+                                    Registrarse
+                                </button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="col s6">
+                        <img src="./src/dog1.jpg" alt="" class="responsive-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems,{
+                yearRange: [1920,2022],
+                autoClose: true
+            });
+        });
+    </script>
+</body>
+</html>

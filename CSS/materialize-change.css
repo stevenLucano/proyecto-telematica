@@ -1,0 +1,100 @@
+html{
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Index.html */
+
+#title-card-1, #title-card-2{
+    position: absolute;
+    top:0; left:0; 
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 24px;
+}
+
+.content-card{
+    position: relative; top: 40px; text-align: justify;
+}
+/* Inicio_sesion.html */
+
+#fondo{
+    position: absolute;
+    height: 95vh;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.9;
+    bottom: 0;
+}
+#fondo img{
+    height: 100%;
+    position: relative;
+    right: 30vw;
+}
+
+#fondo2{
+    position: absolute;
+    left: 25vw;
+    bottom: 0;
+    height: 95vh;
+    width: 75vw;
+    z-index: -1;
+}
+
+#contenido-sesion{
+    width: 50vw;
+    height: 94vh;
+    position: absolute;
+    left: 50vw;
+    bottom: 0;
+    background-color: #fff3e0 ;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+}
+
+.card.medium{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+#form{
+    position: relative;
+    bottom: 12%;
+}
+
+/* Cambio de colores de los input */
+/* label color */
+.input-change label{
+    color: rgb(173, 173, 173) !important;
+}
+/* label focus color */
+.input-change input[type=text]:focus + label,
+.input-change input[type=email]:focus + label,
+.input-change input[type=password]:focus + label {
+    color: rgb(173, 173, 173) !important;
+}
+/* label underline focus color */
+.input-change input[type=text]:focus,
+.input-change input[type=email]:focus,
+.input-change input[type=password]:focus{
+    border-bottom: 1px solid #fb8c00 !important;
+    box-shadow: 0 1px 0 0 #fb8c00 !important;
+}
+/* icon prefix focus color */
+.input-change .prefix.active {
+    color: #fb8c00 !important;
+}
+
+@media (max-width:1600px){
+    #fondo2{
+        display: none;
+    }
+    #contenido-sesion{
+        width: 60vw;
+        left: 40vw;
+    }
+}

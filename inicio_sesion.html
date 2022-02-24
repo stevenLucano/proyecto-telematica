@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fuentes de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/materialize-change.css">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <nav class="amber darken-2">
+        <div class="nav-wrapper container nav-fixed">
+            <a href="index.html" class="left">
+                <div style="transform: scale(1.5);">
+                    Logo
+                    <i class="material-icons left">pets</i>
+                </div>
+            </a>
+            <ul class="right">
+                <li>
+                    <div style="transform: scale(1.1);">
+                        <a href="cuenta_nueva.html" class="btn waves-effect waves-light orange darken-2">
+                            Registrate
+                            <i class="material-icons right">person_add</i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="fondo">
+        <img src="https://s1.1zoom.me/b4542/829/Dogs_Run_Bokeh_Jack_Russell_terrier_571695_1920x1080.jpg" alt="" class="">
+    </div>
+    <div id="fondo2" class=" amber darken-1"></div>
+    <div id="contenido-sesion">
+                <div class="container section">
+                    <div class="row">
+                        <div class="col s3"></div>
+                        <div class="col s7">
+                            <div class="card medium">
+                                    <h4 class="center-align orange-text text-darken-2">INICIAR SESIÓN</h4>
+                                    <form id="form">
+                                        <div class="input-field input-change">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input type="email" id="usuario-input" class="validate">
+                                            <label for="usuario-input">Usuario</label>
+                                        </div>
+                                        <div class="input-field input-change">
+                                            <i class="material-icons prefix">lock</i>
+                                            <input type="password" id="contra-input" class="validate">
+                                            <label for="contra-input">Contraseña</label>
+                                        </div>
+                                        <div class="container center-align">
+                                            <button class="btn center orange darken-2 waves-effect waves-light"
+                                                style="transform: scale(1.1); font-size: 1.1rem;">
+                                                Ingresar
+                                            </button>
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.autocomplete');
+            var instances = M.Autocomplete.init(elems);
+        });
+    </script>
+</body>
+</html>
