@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fuentes de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/materialize-change.css">
+    <title>Solicitud</title>
+</head>
+<body class="grey lighten-3">
+    <nav class="amber darken-2">
+        <div class="nav-wrapper container nav-fixed">
+            <a href="#" class="left large">
+                <div style="transform: scale(1.5);">
+                    <h6 style="display: inline; font-size: 1.3rem; font-weight: bold;">Logo</h6>
+                    <i class="material-icons left">pets</i>
+                </div>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a class="dropdown-trigger" href="#!" data-target="dropdown-registro">
+                        <i class="material-icons left">sentiment_very_satisfied</i>
+                        <h6 style="display: inline; font-size: 1.3rem; font-weight: bold;">Usuario</h6>
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <ul id="dropdown-registro" class="dropdown-content orange lighten-5">
+        <li>
+            <a href="registros.html" class="amber-text text-darken-4">
+                <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Mis puntos</h6>
+                <i class="material-icons">room</i>
+            </a>
+        </li>
+        <li class="divider orange lighten-3"></li>
+        <li>
+            <a href="solicitud-punto.html" class="amber-text text-darken-4">
+                <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Nueva solicitud</h6>
+                <i class="material-icons">send</i>
+            </a>
+        </li>
+        <li class="divider orange lighten-3"></li>
+        <li>
+            <a href="index.html" class="amber-text text-darken-4">
+                <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Cerrar sesión</h6>
+                <i class="material-icons">power_settings_new</i>
+            </a>
+        </li>
+    </ul>
+
+    <div class="container section">
+        <div class="card" id="map-container">
+            <div class="card-content center">
+                <div class="row">
+                    <h1 class="" style="font-weight: 500;">ENVIAR SOLICITUD</h1>
+                </div>
+                <div class="row">
+                    <div class="carousel carousel-slider center">
+                        <div class="carousel-item" href="#one!" id="one-page">
+                            <div class="container">
+                                    <div class="col s12">
+                                        <h2 class="white-text" style="font-size: 2.5rem;">ELIGE UNA UBICACIÓN</h2>
+                                    </div>
+                                    <div class="col s1 m2"></div>
+                                    <div class="col s10 m8">
+                                        <img src="../src/mapa.jpg" alt="Mapa" class="responsive-img" >
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item white-text" id="two-page" href="#two!">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h2 class="white-text" style="font-size: 2.5rem;">INGRESA LOS DATOS DE UNA UBICACIÓN</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s2"></div>
+                                    <div class="col s8">
+                                        <div class="input-field input-change">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input id="ciudad-solicitud" type="text" class="validate">
+                                            <label for="ciudad-solicitud">Ciudad</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s2"></div>
+                                    <div class="col s8">
+                                        <div class="input-field input-change">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input id="dir-solicitud" type="text" class="validate">
+                                            <label for="dir-solicitud">Dirección</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a class="btn waves-effect waves-light amber darken-2 modal-trigger" href="#modal1">
+                    Solicitar
+                    <i class="material-icons right">send</i>
+                </a>
+
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Solicitud enviada</h4>
+                        <p class="flow-text">Tu solicitud ha sido enviada correctamente</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+                            Ok
+                            <i class="material-icons right">done_all</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- <div id="map1"></div> -->
+
+    <!-- <button>Enviar</button> -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/JS/solicitud_punto.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcXdLmbQdY-ve4xLU9IxpgTptbdnbb35c&callback=iniciarMapa"></script> -->
+</body>
+</html>

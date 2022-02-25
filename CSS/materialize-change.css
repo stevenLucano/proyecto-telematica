@@ -95,6 +95,41 @@ html{
     background-color: #ffe0b2;
 }
 
+/* solicitud_punto.html */
+.carousel-slider{
+    height: 52vh;
+}
+
+#one-page{
+    background-image: url("/src/dog2.jpg");
+}
+
+#one-page:before{
+    content:'';
+    position: absolute;
+        top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+#two-page{
+    background-image: url("../src/dog3.jpg");
+}
+
+#two-page:before {
+	content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
 @media (max-width:1600px){
     #fondo2{
         display: none;

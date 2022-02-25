@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./CSS/materialize-change.css">
     <title>Registro</title>
 </head>
-<body>
+<body class="grey lighten-3">
     <nav class="amber darken-2">
         <div class="nav-wrapper container nav-fixed">
             <a href="index.html" class="left">
@@ -34,7 +34,7 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
+    <div class="container section">
         <div class="card">
             <div class="card-content">
                 <div class="row">
@@ -86,10 +86,24 @@
                                 </div>
                             </div>
                             <div class="container center-align">
-                                <button class="btn center orange darken-2 waves-effect waves-light"
-                                style="transform: scale(1.1); font-size: 1.1rem; ">
+                                <a class="btn center orange darken-2 waves-effect waves-light modal-trigger"
+                                style="transform: scale(1.1); font-size: 1.1rem;"
+                                href="#modal1">
                                     Registrarse
-                                </button>
+                                </a>
+                
+                                <div id="modal1" class="modal">
+                                    <div class="modal-content">
+                                        <h4>Registro exitoso</h4>
+                                        <p class="flow-text">Sus datos se han registrado correctamente</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="registros.html" class="modal-close waves-effect waves-green btn-flat">
+                                            Genial
+                                            <i class="material-icons right">done_all</i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                         
@@ -98,7 +112,6 @@
                         <img src="./src/dog1.jpg" alt="" class="responsive-img">
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -111,6 +124,8 @@
                 yearRange: [1920,2022],
                 autoClose: true
             });
+            var elems2 = document.querySelectorAll('.modal');
+            var instances2 = M.Modal.init(elems2, {});
         });
     </script>
 </body>
