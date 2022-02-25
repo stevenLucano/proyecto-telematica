@@ -89,6 +89,12 @@ html{
     color: #fb8c00 !important;
 }
 
+/* registros.html */
+
+#dropdown-registro li:hover{
+    background-color: #ffe0b2;
+}
+
 @media (max-width:1600px){
     #fondo2{
         display: none;
