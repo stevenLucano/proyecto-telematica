@@ -4,16 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fuentes de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/materialize-change.css">
     <title>Puntos registrados</title>
 </head>
-<body>
-    <h1>Puntos Registrados</h1>
-    <div>
-        <img src="../src/mapa.jpg" alt="Mapa de Cali" style="width: 600px;">
+<body class="grey lighten-3">
+    <nav class="amber darken-2">
+        <div class="nav-wrapper container nav-fixed">
+            <a href="#" class="left large">
+                <div style="transform: scale(1.5);">
+                    <h6 style="display: inline; font-size: 1.3rem; font-weight: bold;">Logo</h6>
+                    <i class="material-icons left">pets</i>
+                </div>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a class="dropdown-trigger" href="#!" data-target="dropdown-registro">
+                        <i class="material-icons left">sentiment_very_satisfied</i>
+                        <h6 style="display: inline; font-size: 1.3rem; font-weight: bold;">Usuario</h6>
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <ul id="dropdown-registro" class="dropdown-content orange lighten-5">
+        <li class="blue lighten-5">
+            <a href="puntos.html" class="blue-text text-darken-4">
+                <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Registros</h6>
+                <i class="material-icons">room</i>
+            </a>
+        </li>
+        <li class="divider blue lighten-3"></li>
+        <li class="blue lighten-5">
+            <a href="informes.html" class="blue-text text-darken-4">
+                <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Informes</h6>
+                <i class="material-icons">report_problem</i>
+            </a>
+        </li>
+        <li class="divider blue lighten-3"></li>
+        <li class="blue lighten-5">
+            <a href="solicitudes.html" class="blue-text text-darken-4">
+                <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Solicitudes</h6>
+                <i class="material-icons">add_location</i>
+            </a>
+        </li>
+        <li class="divider blue lighten-3"></li>
+        <li>
+            <a href="index.html" class="amber-text text-darken-4">
+                <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Cerrar sesión</h6>
+                <i class="material-icons">power_settings_new</i>
+            </a>
+        </li>
+    </ul>
+
+    <h1 class="center">Puntos Registrados</h1>
+    <a class="btn amber darken-3 waves-effect waves-light r-tabla" style="position: relative; left: 77vw;" id="btn-cambio">
+        ver tabla
+    </a>
+    <div class="container section">
+        <div class="card">
+            <div class="card-content" id="contenido">
+                <div id="map1" style="width: 100%; height: 500px;"></div>
+            </div>
+        </div>
     </div>
-    <button>Ver tabla</button>
-    <div>
-        <table>
+
+    <template id="tabla-registros">
+        <table id="registros">
             <tr>
                 <th>Punto Registrado</th>
                 <th>Dirección</th>
@@ -21,12 +87,38 @@
                 <th>Opciones</th>
             </tr>
             <tr>
-                <td>#2134</td>
+                <td id="r-1">#2134</td>
                 <td>Calle 5#4-41</td>
                 <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat.</td>
-                <td><button>Eliminar</button></td>
+                <td>
+                    <a class="btn red waves-effect waves-light modal-trigger" 
+                        href="#modal1" id="e-11">
+                        <i class="material-icons" id="e-21">delete_forever</i>
+                    </a>
+            </td>
             </tr>
         </table>
-    </div>
+    </template>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Eliminar Registro</h4>
+            <p class="flow-text" id="modal-e"></p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modal-close waves-effect waves-red btn-flat">
+                Cancelar
+                <i class="material-icons right">clear</i>
+            </a>
+            <a href="#" class="modal-close waves-effect waves-green btn-flat">
+                Ok
+                <i class="material-icons right">check</i>
+            </a>
+        </div>
+    </div> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/JS/puntos.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcXdLmbQdY-ve4xLU9IxpgTptbdnbb35c&callback=iniciarMap"></script>
 </body>
 </html>

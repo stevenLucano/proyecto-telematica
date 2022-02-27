@@ -130,6 +130,15 @@ html{
     z-index: -1;
 }
 
+/* Mapa */
+
+#map{
+    height: 70%;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+}
+
 @media (max-width:1600px){
     #fondo2{
         display: none;
