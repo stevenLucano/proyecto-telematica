@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="./CSS/materialize-change.css">
     <title>Puntos registrados</title>
 </head>
-<body class="grey lighten-3">
+<body class="amber lighten-5">
     <nav class="amber darken-2">
         <div class="nav-wrapper container nav-fixed">
-            <a href="#" class="left large">
+            <a href="index.html" class="left large">
                 <div style="transform: scale(1.5);">
                     <h6 style="display: inline; font-size: 1.3rem; font-weight: bold;">Logo</h6>
                     <i class="material-icons left">pets</i>
@@ -79,12 +79,12 @@
     </div>
 
     <template id="tabla-registros">
-        <table id="registros">
+        <table id="registros" class="centered">
             <tr>
-                <th>Punto Registrado</th>
-                <th>Dirección</th>
-                <th>Informe</th>
-                <th>Opciones</th>
+                <th class="center-align">Punto Registrado</th>
+                <th class="center-align">Dirección</th>
+                <th class="center-align">Informe</th>
+                <th class="center-align">Opciones</th>
             </tr>
             <tr>
                 <td id="r-1">#2134</td>
@@ -95,7 +95,18 @@
                         href="#modal1" id="e-11">
                         <i class="material-icons" id="e-21">delete_forever</i>
                     </a>
-            </td>
+                </td>
+            </tr>
+            <tr>
+                <td id="r-2">#4324</td>
+                <td>Calle 5#4-41</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat.</td>
+                <td>
+                    <a class="btn red waves-effect waves-light modal-trigger" 
+                        href="#modal1" id="e-12">
+                        <i class="material-icons" id="e-22">delete_forever</i>
+                    </a>
+                </td>
             </tr>
         </table>
     </template>

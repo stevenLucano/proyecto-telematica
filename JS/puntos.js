@@ -54,13 +54,14 @@ const alternar = e => {
     }
 }
 
-const registrosT = document.getElementById("registros");
-registrosT.addEventListener('click', e => {
+contenido.addEventListener('click', e => {
+    // console.log("Hello!")
     cambiarBoton(e);
 })
 
 
 const cambiarBoton = e => {
+    // console.log("HeloO!")
     if(e.target.id[0]==="e"){
         const id = document.getElementById(`r-${e.target.id[e.target.id.length-1]}`);
         const modal = document.getElementById("modal-e");
