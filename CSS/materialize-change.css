@@ -101,7 +101,7 @@ html{
 }
 
 #one-page{
-    background-image: url("/src/dog2.jpg");
+    background-image: url("../src/dog2.jpg");
 }
 
 #one-page:before{
