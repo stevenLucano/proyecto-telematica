@@ -17,6 +17,7 @@ html{
 .content-card{
     position: relative; top: 40px; text-align: justify;
 }
+
 /* Inicio_sesion.html */
 
 #fondo{
@@ -27,6 +28,7 @@ html{
     opacity: 0.9;
     bottom: 0;
 }
+
 #fondo img{
     height: 100%;
     position: relative;
@@ -48,7 +50,6 @@ html{
     position: absolute;
     left: 50vw;
     bottom: 0;
-    background-color: #fff3e0 ;
     z-index: -1;
     display: flex;
     align-items: center;
