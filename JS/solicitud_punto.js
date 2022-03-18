@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         indicators: true,
         duration: 100
     });
-
-    var elems3 = document.querySelectorAll('.modal');
-    var instances3 = M.Modal.init(elems3, {});
 });
 
 function iniciarMap(){

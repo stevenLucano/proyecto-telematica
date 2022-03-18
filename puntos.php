@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="./CSS/materialize-change.css">
     <title>Puntos registrados</title>
 </head>
+
 <body class="amber lighten-5">
     <nav class="amber darken-2">
         <div class="nav-wrapper container nav-fixed">
@@ -35,31 +37,31 @@
             </ul>
         </div>
     </nav>
-    
+
     <ul id="dropdown-registro" class="dropdown-content orange lighten-5">
-        <li class="blue lighten-5">
-            <a href="puntos.html" class="blue-text text-darken-4">
+        <li class="orange lighten-5">
+            <a href="./puntos.php" class="amber-text text-darken-4">
                 <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Registros</h6>
                 <i class="material-icons">room</i>
             </a>
         </li>
-        <li class="divider blue lighten-3"></li>
-        <li class="blue lighten-5">
-            <a href="informes.html" class="blue-text text-darken-4">
+        <li class="divider orange lighten-3"></li>
+        <li class="orange lighten-5">
+            <a href="./informes.php" class="amber-text text-darken-4">
                 <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Informes</h6>
                 <i class="material-icons">report_problem</i>
             </a>
         </li>
-        <li class="divider blue lighten-3"></li>
-        <li class="blue lighten-5">
-            <a href="solicitudes.html" class="blue-text text-darken-4">
+        <li class="divider orange lighten-3"></li>
+        <li class="orange lighten-5">
+            <a href="./solicitudes.php" class="amber-text text-darken-4">
                 <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Solicitudes</h6>
                 <i class="material-icons">add_location</i>
             </a>
         </li>
-        <li class="divider blue lighten-3"></li>
+        <li class="divider orange lighten-3"></li>
         <li>
-            <a href="index.html" class="amber-text text-darken-4">
+            <a href="./PHP/cerrar.php" class="amber-text text-darken-4">
                 <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Cerrar sesión</h6>
                 <i class="material-icons">power_settings_new</i>
             </a>
@@ -91,8 +93,7 @@
                 <td>Calle 5#4-41</td>
                 <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat.</td>
                 <td>
-                    <a class="btn red waves-effect waves-light modal-trigger" 
-                        href="#modal1" id="e-11">
+                    <a class="btn red waves-effect waves-light modal-trigger" href="#modal1" id="e-11">
                         <i class="material-icons" id="e-21">delete_forever</i>
                     </a>
                 </td>
@@ -102,8 +103,7 @@
                 <td>Calle 5#4-41</td>
                 <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat.</td>
                 <td>
-                    <a class="btn red waves-effect waves-light modal-trigger" 
-                        href="#modal1" id="e-12">
+                    <a class="btn red waves-effect waves-light modal-trigger" href="#modal1" id="e-12">
                         <i class="material-icons" id="e-22">delete_forever</i>
                     </a>
                 </td>
@@ -126,10 +126,11 @@
                 <i class="material-icons right">check</i>
             </a>
         </div>
-    </div> 
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./JS/puntos.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcXdLmbQdY-ve4xLU9IxpgTptbdnbb35c&callback=iniciarMap"></script>
 </body>
+
 </html>

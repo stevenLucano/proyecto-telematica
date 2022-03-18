@@ -4,7 +4,6 @@ include_once 'conexion.php';
 
 $id = $_GET['id'];
 $opc = $_GET['opc'];
-//Llamar los datos de la tabla registros pertenecientes a $_SESSION['admin'];
 
 $sql = $opc ? 'UPDATE `registros` SET `disponibilidad`=0 WHERE id=?' : 'UPDATE `registros` SET `disponibilidad`=1 WHERE id=?';
 $sentencia = $pdo->prepare($sql);

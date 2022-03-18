@@ -51,35 +51,35 @@ include_once './PHP/conexion.php';
         <?php if ($_SESSION['admin'] == "admin@gmail.com") : ?>
             <!-- <li class="divider orange lighten-3"></li> -->
             <li class="orange lighten-5">
-                <a href="puntos.html" class="amber-text text-darken-4">
+                <a href="./puntos.php" class="amber-text text-darken-4">
                     <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Registros</h6>
                     <i class="material-icons">room</i>
                 </a>
             </li>
             <li class="divider orange lighten-3"></li>
             <li class="orange lighten-5">
-                <a href="informes.html" class="amber-text text-darken-4">
+                <a href="./informes.php" class="amber-text text-darken-4">
                     <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Informes</h6>
                     <i class="material-icons">report_problem</i>
                 </a>
             </li>
             <li class="divider orange lighten-3"></li>
             <li class="orange lighten-5">
-                <a href="solicitudes.html" class="amber-text text-darken-4">
+                <a href="./solicitudes.php" class="amber-text text-darken-4">
                     <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Solicitudes</h6>
                     <i class="material-icons">add_location</i>
                 </a>
             </li>
         <?php else : ?>
             <li>
-                <a href="registros.html" class="amber-text text-darken-4">
+                <a href="./registros.php" class="amber-text text-darken-4">
                     <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Mis puntos</h6>
                     <i class="material-icons">room</i>
                 </a>
             </li>
             <li class="divider orange lighten-3"></li>
             <li>
-                <a href="solicitud_punto.html" class="amber-text text-darken-4">
+                <a href="./solicitud_punto.php" class="amber-text text-darken-4">
                     <h6 style="display: inline; font-size: 1.1rem; font-weight: bold;">Nueva solicitud</h6>
                     <i class="material-icons">send</i>
                 </a>

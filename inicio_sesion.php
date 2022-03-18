@@ -47,7 +47,11 @@
 
         if (password_verify($contrasena_login, $resultado['contrasena'])) {
             $_SESSION['admin'] = $usuario_login;
-            header('location: ./registros.php');
+            if ($_SESSION['admin'] == "admin@gmail.com") {
+                header('location: ./puntos.php');
+            } else {
+                header('location: ./registros.php');
+            }
         }
 
         $usuarioText = $_POST["usuario"];
