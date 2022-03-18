@@ -149,3 +149,15 @@ html{
         left: 40vw;
     }
 }
+
+/* Cuenta nueva */
+#advertencia{
+    padding: 10px 0 0 0;
+}
+#advertencia .row{
+    margin: 0;
+    padding: 0;
+}
+#advertencia h5{
+    margin: 0;
+}
