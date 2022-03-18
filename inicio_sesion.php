@@ -37,12 +37,12 @@
         $sentencia->execute(array($usuario_login));
         $resultado = $sentencia->fetch();
 
+        $passTrue = 1;
         if (!$resultado) {
-            //Matar la operación
             echo '<script>
             console.log("El usuario no existe");
             </script>';
-            // die();
+            header('location: ./inicio_sesion.php?var=1');
         }
 
         if (password_verify($contrasena_login, $resultado['contrasena'])) {
@@ -52,11 +52,13 @@
             } else {
                 header('location: ./registros.php');
             }
+        } else {
+            $passTrue = 0;
         }
-
         $usuarioText = $_POST["usuario"];
     } else {
         $usuarioText = "";
+        $passTrue = 1;
     }
 
     ?>
@@ -88,6 +90,25 @@
     </div>
 
     <div id="fondo2" class=" amber darken-1"></div>
+
+    <?php if ($_GET['var'] == 1) : ?>
+        <div class="card-panel  red lighten-5" style="width:30vw; position: absolute; right:9vw; top:13vh; text-align:center; padding:1rem 0;">
+            <span class="red-text">
+                <h4>
+                    El usuario no existe
+                </h4>
+            </span>
+        </div>
+    <?php endif ?>
+    <?php if (!$passTrue) : ?>
+        <div class="card-panel  red lighten-5" style="width:30vw; position: absolute; right:9vw; top:13vh; text-align:center; padding:1rem 0;">
+            <span class="red-text">
+                <h4>
+                    La contraseña es incorrecta
+                </h4>
+            </span>
+        </div>
+    <?php endif ?>
 
     <div id="contenido-sesion" class="orange lighten-5">
         <div class="container section">
@@ -129,16 +150,8 @@
     </script>
     <script>
         const inputUser = document.getElementById("usuario-input");
-        // console.log(inputUser);
         inputUser.value = "<?php echo $usuarioText; ?>";
     </script>
-
-
-    <!-- <script>
-        const inputUser = document.getElementById("usuario-input");
-        console.log(inputUser);
-        inputUser.value = "A ver";
-    </script> -->
 </body>
 
 </html>

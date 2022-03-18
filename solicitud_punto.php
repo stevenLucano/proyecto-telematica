@@ -132,11 +132,8 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <!-- <div id="map1"></div> -->
 
-    <!-- <button>Enviar</button> -->
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./JS/solicitud_punto.js"></script>

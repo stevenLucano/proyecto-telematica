@@ -1,14 +1,5 @@
 <?php
 session_start();
-// include_once('conexion.php');
-// echo "Conectado";
-
-// $a = $_GET['reg'];
-// '&ap=' . $apellidos .
-//         '&na=' . $nacimiento .
-//         '&res=' . $residencia .
-//         '&dir=' . $direccion .
-//         '&cor=' . $correo);
 ?>
 
 <!DOCTYPE html>
@@ -161,9 +152,7 @@ session_start();
             </a>
         </div>
     </div>
-    <?php
-    // echo '<script>console.log(' . $a . ');</script>';
-    ?>
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
