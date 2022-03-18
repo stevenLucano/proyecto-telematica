@@ -120,6 +120,11 @@ $tabla = $_GET['tabla'];
                 <th class="center-align">Ciudad</th>
                 <th class="center-align">Dirección</th>
                 <th class="center-align">Disponibilidad</th>
+                <?php if ($_SESSION['admin'] == "admin@gmail.com") : ?>
+                    <th class="center-align">Eliminar</th>
+                <?php else : ?>
+                    <th class="center-align">Enviar informe</th>
+                <?php endif ?>
             </tr>
             <?php foreach ($resultado_registros as $registro) : ?>
                 <tr>
@@ -135,20 +140,26 @@ $tabla = $_GET['tabla'];
                                 <a href="./PHP/cambiarDisponible.php?page=1&id=<?php echo $registro['id'] ?>&opc=<?php echo $registro['disponibilidad'] ?>" class="btn red waves-effect waves-light" style="width: 10rem;">No disponible</a>
                             <?php endif ?>
                         </td>
+                        <td style="padding: 0 80px;">
+                            <a href="./PHP/eliminarRegistro.php?opc=1&id=<?php echo $registro['id'] ?>" class="btn red waves-effect waves-light btn-small" style="padding:0; width: 30%;">
+                                <i style="width:100%" class="material-icons" id="<?php echo $registro['id'] ?>">clear</i>
+                            </a>
+                        </td>
                     <?php else : ?>
-                        <td>
+                        <td style="display: flex; justify-content:center;">
                             <?php if ($registro['disponibilidad']) : ?>
-                                <div class="green white-text" style="width: 10rem;">
-                                    <h6>Disponible</h6>
+                                <div class="green white-text" style="width: 10rem; padding:5px 0;">
+                                    <h6 style="font-size: 1.3rem;">Disponible</h6>
                                 </div>
                             <?php else : ?>
-                                <div class="red white-text" style="width: 10rem;">
-                                    <h6>No disponible</h6>
+                                <div class="red white-text" style="width: 10rem; padding:5px 0;">
+                                    <h6 style="font-size: 1.3rem;">No disponible</h6>
                                 </div>
                             <?php endif ?>
                         </td>
-                        <td><a href="#modal4" class="btn red waves-effect waves-light btn-small modal-trigger" style="padding:0; width: 100%;">
-                                <i class="material-icons" id="<?php echo $registro['id'] ?>">warning</i>
+                        <td style="padding: 0 80px;">
+                            <a href="#modal4" class="btn red waves-effect waves-light btn-small modal-trigger" style="padding:0; width: 30%;">
+                                <i style="width:100%" class="material-icons" id="<?php echo $registro['id'] ?>">warning</i>
                             </a>
                         </td>
                     <?php endif ?>

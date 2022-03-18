@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include_once 'conexion.php';
 
 //Capturar datos por post

@@ -3,7 +3,14 @@
 session_start();
 include_once './PHP/conexion.php';
 
+// //Llamar los datos de la tabla informes
+$sql_infos = 'SELECT * FROM informes ORDER BY id_registro';
+$sentencia_infos = $pdo->prepare($sql_infos);
+$sentencia_infos->execute();
+$resultado = $sentencia_infos->fetchAll();
 
+$a = "";
+$b = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,25 +86,40 @@ include_once './PHP/conexion.php';
         <div class="card red lighten-5 red-text text-darken-3 hoverable">
             <div class="card-content">
                 <h1 class="center">Informes</h1>
-                <table class="highlight centered responsive-table" id="informes" style="font-size: 1.3rem;">
+                <table class="centered responsive-table" id="informes" style="font-size: 1.3rem;">
                     <tr>
                         <th class="center-align">Punto Registrado</th>
                         <th class="center-align">Dirección</th>
                         <th class="center-align">Informe</th>
                         <th class="center-align">Opciones</th>
                     </tr>
-                    <tr>
-                        <td id="r-1">#2134</td>
-                        <td>Calle 5#4-41</td>
-                        <td>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, tenetur.
-                        </td>
-                        <td>
-                            <a class="btn red waves-effect waves-light modal-trigger" href="#modal1" id="e-01">
-                                <i class="material-icons" id="e-11">delete_forever</i>
-                            </a>
-                        </td>
-                    </tr>
+                    <?php foreach ($resultado as $informe) :
+                        if ($a != $informe['id_registro']) {
+                            $a = $informe['id_registro'];
+
+                            $sql_cantidad = 'SELECT * FROM informes WHERE id_registro=?';
+                            $sentencia_cantidad = $pdo->prepare($sql_cantidad);
+                            $sentencia_cantidad->execute(array($a));
+                            $resultado_cantidad = $sentencia_cantidad->fetchAll();
+
+                            $cantidad = count($resultado_cantidad);
+                            $b = 1;
+                        }
+                    ?>
+                        <tr>
+                            <?php if ($b) :
+                                $b = 0; ?>
+                                <td rowspan="<?php echo $cantidad ?>"><a href="./puntos.php?tabla=1">#<?php echo $informe['id_registro'] ?></a></td>
+                            <?php endif ?>
+                            <td><?php echo $informe['direccion'] ?></td>
+                            <td><?php echo $informe['informe'] ?></td>
+                            <td>
+                                <a class="btn red waves-effect waves-light modal-trigger" href="./PHP/eliminarInfo.php?id=<?php echo $informe['id_informes'] ?>">
+                                    <i class="material-icons">delete_forever</i>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
                 </table>
             </div>
         </div>

@@ -91,6 +91,7 @@ $resultado = $sentencia->fetchAll();
                         <th class="center-align">Ubicación</th>
                         <th class="center-align">Dirección</th>
                         <th colspan="2" class="center-align">Opciones</th>
+                        <th class="center-align">Eliminar</th>
                     </tr>
                     <?php foreach ($resultado as $solicitud) : ?>
                         <tr>
@@ -106,6 +107,11 @@ $resultado = $sentencia->fetchAll();
                                 </td>
                                 <td>
                                     <a class="btn red waves-effect waves-light modal-trigger" href="./PHP/estadoSolicitud.php?id=<?php echo $solicitud['id_solicitud']; ?>&opc=0">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="btn disabled">
                                         <i class="material-icons">delete_forever</i>
                                     </a>
                                 </td>
@@ -115,83 +121,29 @@ $resultado = $sentencia->fetchAll();
                                         RECHAZADA
                                     </button>
                                 </td>
+                                <td>
+                                    <a class="btn red waves-effect waves-light modal-trigger" href="./PHP/eliminarSolicitud.php?id=<?php echo $solicitud['id_solicitud']; ?>">
+                                        <i class="material-icons">delete_forever</i>
+                                    </a>
+                                </td>
                             <?php elseif ($solicitud['aceptada'] == 1) : ?>
                                 <td colspan="2">
                                     <button class="btn disabled">
                                         ACEPTADA
                                     </button>
                                 </td>
+                                <td>
+                                    <a class="btn red waves-effect waves-light modal-trigger" href="./PHP/eliminarSolicitud.php?id=<?php echo $solicitud['id_solicitud']; ?>">
+                                        <i class="material-icons">delete_forever</i>
+                                    </a>
+                                </td>
                             <?php endif ?>
                         </tr>
                     <?php endforeach ?>
-                    <!-- <tr>
-                        <td>Santiago</td>
-                        <td>Cali</td>
-                        <td>Calle 5#4-41</td>
-                        <td>
-                            <a class="btn green waves-effect waves-light modal-trigger" href="#modal2">
-                                <i class="material-icons">check</i>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="btn red waves-effect waves-light modal-trigger" href="#modal1">
-                                <i class="material-icons">delete_forever</i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Santiago</td>
-                        <td>Cali</td>
-                        <td>Calle 5#4-41</td>
-                        <td>
-                            <a class="btn green waves-effect waves-light modal-trigger" href="#modal2">
-                                <i class="material-icons">check</i>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="btn red waves-effect waves-light modal-trigger" href="#modal1">
-                                <i class="material-icons">delete_forever</i>
-                            </a>
-                        </td>
-                    </tr> -->
                 </table>
             </div>
         </div>
     </div>
-
-    <!-- <div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4>Eliminar solicitud</h4>
-            <p class="flow-text">¿Desea eliminar la solicitud?</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#" class="modal-close waves-effect waves-red btn-flat">
-                Cancelar
-                <i class="material-icons right">clear</i>
-            </a>
-            <a href="#" class="modal-close waves-effect waves-green btn-flat">
-                Ok
-                <i class="material-icons right">check</i>
-            </a>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <h4>Confirmar solicitud</h4>
-            <p class="flow-text">¿Desea confirmar la solicitud?</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#" class="modal-close waves-effect waves-red btn-flat">
-                Cancelar
-                <i class="material-icons right">clear</i>
-            </a>
-            <a href="#" class="modal-close waves-effect waves-green btn-flat">
-                Ok
-                <i class="material-icons right">check</i>
-            </a>
-        </div>
-    </div> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
