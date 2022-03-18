@@ -107,7 +107,6 @@ include_once './PHP/conexion.php';
     $sentencia_registros = $pdo->prepare($sql_registros);
     $sentencia_registros->execute(array($resultado_session[0]['id']));
     $resultado_registros = $sentencia_registros->fetchAll();
-    // var_dump($resultado_registros);
 
     ?>
     <?php if (count($resultado_registros)) : ?>

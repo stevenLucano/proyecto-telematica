@@ -28,6 +28,12 @@ function iniciarMap(){
 }
 
 const btnCambio = document.getElementById("btn-cambio");
+if(btnCambio.innerHTML.trim() == "ver mapa"){
+    mapaPrueba.style.display = "none";
+    const cloneTabla = tablaCont.cloneNode(true);
+    fragment.appendChild(cloneTabla);
+    contenido.appendChild(fragment);
+}
 
 btnCambio.addEventListener('click', e => {
     alternar(e);
@@ -55,16 +61,12 @@ const alternar = e => {
 }
 
 contenido.addEventListener('click', e => {
-    // console.log("Hello!")
-    cambiarBoton(e);
+    obtenerId(e);
 })
 
-
-const cambiarBoton = e => {
-    // console.log("HeloO!")
-    if(e.target.id[0]==="e"){
-        const id = document.getElementById(`r-${e.target.id[e.target.id.length-1]}`);
-        const modal = document.getElementById("modal-e");
-        modal.innerHTML = `Desea eliminar el registro ${id.innerHTML}`;
+const obtenerId = e => {
+    if(e.target.classList.contains("material-icons")){
+        const inputId = document.getElementById("info-id");
+        inputId.value = e.target.id;
     }
 }
